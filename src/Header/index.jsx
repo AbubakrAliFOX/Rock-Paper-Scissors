@@ -1,9 +1,8 @@
 import { HStack, Box, Image, Text } from "@chakra-ui/react";
-import "./style.css";
 
 export default function Header() {
   return (
-    <HStack className="Header">
+    <HStack border="2px white solid" borderRadius="25px">
       <Box>
         <Image m="20px" mt="30px" src="title.svg" />
       </Box>
