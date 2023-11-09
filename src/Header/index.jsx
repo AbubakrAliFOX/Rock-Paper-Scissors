@@ -3,7 +3,7 @@ import "./style.css";
 
 export default function Header() {
   return (
-    <HStack className="Header" spacing="4">
+    <HStack className="Header">
       <Box>
         <Image m="20px" mt="30px" src="title.svg" />
       </Box>
@@ -11,6 +11,8 @@ export default function Header() {
       <Box
         w="90px"
         h="110px"
+        ml="auto"
+        mr="20px"
         display="inline"
         fontWeight="bold"
         borderRadius="10px"
@@ -21,7 +23,7 @@ export default function Header() {
           SCORE
         </Text>
         <Text display="inline" m={0} fontSize={55}>
-          0
+          50
         </Text>
       </Box>
     </HStack>
