@@ -9,8 +9,8 @@ export default function Header() {
       </Box>
 
       <Box
-        w="90px"
-        h="110px"
+        w="100px"
+        h="120px"
         ml="auto"
         mr="20px"
         display="inline"
