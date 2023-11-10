@@ -10,7 +10,8 @@ function App() {
   const [choice, setChoice] = useState({
     user: "",
     house: "",
-    winner: ''
+    winner: '',
+    gameDone: false
   });
   const randomHouseChoice = ["rock", "paper", "scissors"][
     Math.floor(Math.random() * 3)
