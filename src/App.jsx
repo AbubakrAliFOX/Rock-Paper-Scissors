@@ -10,6 +10,7 @@ function App() {
   const [choice, setChoice] = useState({
     user: "",
     house: "",
+    winner: ''
   });
   const randomHouseChoice = ["rock", "paper", "scissors"][
     Math.floor(Math.random() * 3)
@@ -26,7 +27,7 @@ function App() {
   //     });
   //   }
   // }, [choice.user]);
-  console.log(choice);
+  // console.log(choice);
   return (
     <Box w="60%" mx="auto">
       <GameContext.Provider value={{ choice, setChoice }}>
