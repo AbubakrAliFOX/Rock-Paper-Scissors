@@ -12,7 +12,8 @@ function App() {
     house: "",
     winner: '',
     score: 0,
-    gameDone: false
+    gameDone: false,
+    showRules: false
   });
   const randomHouseChoice = ["rock", "paper", "scissors"][
     Math.floor(Math.random() * 3)

@@ -5,6 +5,7 @@ import {
   Text,
   Button,
   ButtonGroup,
+  Image,
 } from "@chakra-ui/react";
 import GameBoxChoice from "../GameBoxChoice";
 import GameBox from "../GameBox";
@@ -30,8 +31,7 @@ export default function Body() {
   return (
     <HStack mt={50} mb={100}>
       <Box
-        h="278px"
-        w="313px"
+        
         mx="auto"
         display={choice.gameDone == true ? "none" : "block"}
       >
@@ -43,16 +43,15 @@ export default function Body() {
           <GameBoxChoice type="scissors" />
         </VStack>
       </Box>
-      <Box
-        h="278px"
-        w="313px"
+      {/* <Box
+        
         mx="auto"
         display={choice.gameDone == true ? "block" : "none"}
       >
         <VStack>
           <HStack>
-            <GameBox type={choice.user} winner={choice.winner} />
-            <GameBox type={choice.house} winner={choice.winner} />
+            <GameBox type={choice.user} />
+            <GameBox type={choice.house} />
           </HStack>
           <Text>{showWinner()}</Text>
           <ButtonGroup gap="4">
@@ -61,7 +60,17 @@ export default function Body() {
             </Button>
           </ButtonGroup>
         </VStack>
-      </Box>
+      </Box> */}
+
+
+
+      {/* <Box
+        w={800} h={400} 
+        mx="auto"
+        display={choice.gameDone == true ? "block" : "none"}
+      > */}
+        <Image w={900} h={300}  src="rules.png"></Image>
+      {/* </Box> */}
     </HStack>
   );
 }
