@@ -38,17 +38,17 @@ export default function GameBoxChoice({ type, id }) {
       if (p1 === p2 && p1 != "" && p2 != "") {
         win = "draw";
       } else if (p1 === "rock" && p2 === "paper" && p1 != "" && p2 != "") {
-        win = "p2 won";
+        win = "house";
       } else if (p1 === "rock" && p2 === "scissors" && p1 != "" && p2 != "") {
-        win = "p1 won";
+        win = "user";
       } else if (p1 === "paper" && p2 === "rock" && p1 != "" && p2 != "") {
-        win = "p1 won";
+        win = "user";
       } else if (p1 === "paper" && p2 === "scissors" && p1 != "" && p2 != "") {
-        win = "p2 won";
+        win = "house";
       } else if (p1 === "scissors" && p2 === "paper" && p1 != "" && p2 != "") {
-        win = "p1 won";
+        win = "user";
       } else if (p1 === "scissors" && p2 === "rock" && p1 != "" && p2 != "") {
-        win = "p2 won";
+        win = "house";
       }
 
       return { ...prev, user: p1, house: p2, winner: win, gameDone: true };

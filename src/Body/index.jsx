@@ -1,4 +1,4 @@
-import { Box, HStack, VStack, Center } from "@chakra-ui/react";
+import { Box, HStack, VStack, Text } from "@chakra-ui/react";
 import GameBoxChoice from "../GameBoxChoice";
 import GameBox from "../GameBox";
 import { GameContext } from "../GameContext";
@@ -6,6 +6,15 @@ import { useContext } from "react";
 
 export default function Body() {
   const { choice, setChoice } = useContext(GameContext);
+  const showWinner = () => {
+    if(choice.winner == 'user') {
+        return 'You have won!'
+    } else if (choice.winner == 'house') {
+        return 'The house has won!'
+    } else if (choice.winner == 'draw') {
+        return 'It is a draw!'
+    }
+  }
   return (
     <HStack mt={50} mb={100}>
       <Box
@@ -26,17 +35,17 @@ export default function Body() {
         display={choice.gameDone == true ? "block" : "none"}
         h="278px"
         w="313px"
+        mx="auto"
         // border="2px solid white"
         // borderRadius={34}
       >
-        <Center>
           <VStack>
             <HStack>
-              <GameBox type="scissors" />
-              <GameBox type="scissors" />
+              <GameBox type={choice.user} />
+              <GameBox type={choice.house} />
             </HStack>
+            <Text>{showWinner()} </Text>
           </VStack>
-        </Center>
       </Box>
     </HStack>
   );
