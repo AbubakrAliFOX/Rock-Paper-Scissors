@@ -11,6 +11,7 @@ function App() {
     user: "",
     house: "",
     winner: '',
+    score: 0,
     gameDone: false
   });
   const randomHouseChoice = ["rock", "paper", "scissors"][

@@ -35,6 +35,7 @@ export default function GameBoxChoice({ type, id }) {
       let p1 = type;
       let p2 = newHouse();
       let win = "";
+      let calcScore = prev.score;
       if (p1 === p2 && p1 != "" && p2 != "") {
         win = "draw";
       } else if (p1 === "rock" && p2 === "paper" && p1 != "" && p2 != "") {
@@ -50,8 +51,14 @@ export default function GameBoxChoice({ type, id }) {
       } else if (p1 === "scissors" && p2 === "rock" && p1 != "" && p2 != "") {
         win = "house";
       }
-
-      return { ...prev, user: p1, house: p2, winner: win, gameDone: true };
+      // score logic
+      if (win == 'user') {
+        calcScore++;
+      } else if (win == 'house') {
+        calcScore--;
+      } 
+      // else if (win == 'draw') {}
+      return { ...prev, user: p1, house: p2, winner: win, score: calcScore, gameDone: true };
     });
     // findWinner(choice);
   };

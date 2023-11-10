@@ -4,7 +4,7 @@ export default function GameBox({ type, forChoice }) {
   let borderColor = "";
 //   if (forChoice) {
     if (type === "rock") {
-      borderColor = "#5a3bc4";
+      borderColor = "#1cbdf8";
     } else if (type === "paper") {
       borderColor = "#d6e31c";
     } else if (type === "scissors") {
@@ -16,7 +16,7 @@ export default function GameBox({ type, forChoice }) {
     // transform: transValue,
     transition: "200ms ease-in-out",
     cursor: forChoice ? "pointer" : "auto",
-    boxShadow: `0px 0px 120px #F4AAB9`
+    boxShadow: `0px 0px 120px ${borderColor}`
   };
   return (
     <Circle

@@ -51,8 +51,8 @@ export default function Body() {
       >
         <VStack>
           <HStack>
-            <GameBox type={choice.user} />
-            <GameBox type={choice.house} />
+            <GameBox type={choice.user} winner={choice.winner} />
+            <GameBox type={choice.house} winner={choice.winner} />
           </HStack>
           <Text>{showWinner()}</Text>
           <ButtonGroup gap="4">

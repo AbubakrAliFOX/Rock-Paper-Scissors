@@ -1,6 +1,9 @@
 import { HStack, Box, Image, Text } from "@chakra-ui/react";
+import { GameContext } from "../GameContext";
+import { useContext } from "react";
 
 export default function Header() {
+    const {choice} = useContext(GameContext);
   return (
     <HStack border="2px white solid" borderRadius="25px">
       <Box>
@@ -22,7 +25,7 @@ export default function Header() {
           SCORE
         </Text>
         <Text display="inline" m={0} fontSize={55}>
-          50
+          {choice.score}
         </Text>
       </Box>
     </HStack>
