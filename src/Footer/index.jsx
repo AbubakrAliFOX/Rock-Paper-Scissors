@@ -1,7 +1,13 @@
 import { Box, Text, Link, Button, ButtonGroup } from "@chakra-ui/react";
 import { ExternalLinkIcon } from "@chakra-ui/icons";
+import { useContext } from "react";
+import { GameContext } from "../GameContext";
 
 export default function Footer() {
+  const { choice, setChoice } = useContext(GameContext);
+  const resetGame = () => {
+    setChoice(prev => ({...prev, user: '', house: '', winner: '', score:0, gameDone: false }))
+  }
   return (
     <Box>
       <Text>
@@ -11,7 +17,7 @@ export default function Footer() {
         </Link>
       </Text>
       <ButtonGroup gap="4">
-        <Button>Reset</Button>
+        <Button onClick={resetGame}>Reset</Button>
         <Button>Rules</Button>
       </ButtonGroup>
     </Box>

@@ -57,10 +57,8 @@ export default function GameBoxChoice({ type, id }) {
       } else if (win == 'house') {
         calcScore--;
       } 
-      // else if (win == 'draw') {}
       return { ...prev, user: p1, house: p2, winner: win, score: calcScore, gameDone: true };
     });
-    // findWinner(choice);
   };
 
   console.log(choice);
