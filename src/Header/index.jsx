@@ -5,7 +5,7 @@ import { useContext } from "react";
 export default function Header() {
     const {choice} = useContext(GameContext);
   return (
-    <HStack border="2px white solid" borderRadius="25px">
+    <HStack border="2px white solid" borderRadius="25px" mt={30}>
       <Box>
         <Image m="20px" mt="30px" src="title.svg" />
       </Box>

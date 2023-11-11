@@ -10,7 +10,7 @@ export default function Footer() {
     setChoice(prev => ({...prev, user: '', house: '', winner: '', score:0, gameDone: false }))
   }
   return (
-    <Box>
+    <Box mb={100}>
       <Text>
         Rock Paper Scissors Game -{" "}
         <Link href="https://portfolio-kfwr.onrender.com/" isExternal>
@@ -19,9 +19,8 @@ export default function Footer() {
       </Text>
       <ButtonGroup gap="4">
         <Button onClick={resetGame}>Reset</Button>
-        <Button>Rules</Button>
+        {/* <Button>Rules</Button> */}
       </ButtonGroup>
-      <RulesDialog />
     </Box>
   );
 }

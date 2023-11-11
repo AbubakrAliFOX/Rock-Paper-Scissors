@@ -29,7 +29,7 @@ export default function Body() {
     })
   };
   return (
-    <HStack mt={50} mb={100}>
+    <HStack mt={50} mb={40}>
       <Box
         
         mx="auto"
@@ -43,7 +43,7 @@ export default function Body() {
           <GameBoxChoice type="scissors" />
         </VStack>
       </Box>
-      {/* <Box
+      <Box
         
         mx="auto"
         display={choice.gameDone == true ? "block" : "none"}
@@ -60,7 +60,7 @@ export default function Body() {
             </Button>
           </ButtonGroup>
         </VStack>
-      </Box> */}
+      </Box>
 
 
 
@@ -69,7 +69,7 @@ export default function Body() {
         mx="auto"
         display={choice.gameDone == true ? "block" : "none"}
       > */}
-        <Image w={900} h={300}  src="rules.png"></Image>
+        {/* <Image w={900} h={300}  src="rules.png"></Image> */}
       {/* </Box> */}
     </HStack>
   );
