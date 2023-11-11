@@ -2,7 +2,6 @@ import { Box, Text, Link, Button, ButtonGroup } from "@chakra-ui/react";
 import { ExternalLinkIcon } from "@chakra-ui/icons";
 import { useContext } from "react";
 import { GameContext } from "../GameContext";
-import RulesDialog from '../RulesDialog';
 
 export default function Footer() {
   const { choice, setChoice } = useContext(GameContext);

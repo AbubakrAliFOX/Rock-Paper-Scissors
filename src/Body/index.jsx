@@ -4,8 +4,7 @@ import {
   VStack,
   Text,
   Button,
-  ButtonGroup,
-  Image,
+  ButtonGroup
 } from "@chakra-ui/react";
 import GameBoxChoice from "../GameBoxChoice";
 import GameBox from "../GameBox";
@@ -52,14 +51,6 @@ export default function Body() {
           </ButtonGroup>
         </VStack>
       </Box>
-
-      {/* <Box
-        w={800} h={400} 
-        mx="auto"
-        display={choice.gameDone == true ? "block" : "none"}
-      > */}
-      {/* <Image w={900} h={300}  src="rules.png"></Image> */}
-      {/* </Box> */}
     </HStack>
   );
 }

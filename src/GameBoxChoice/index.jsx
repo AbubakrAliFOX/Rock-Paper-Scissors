@@ -1,35 +1,14 @@
-import { Image, Circle } from "@chakra-ui/react";
 import { useContext } from "react";
 import { GameContext } from "../GameContext";
 import GameBox from "../GameBox";
 
 export default function GameBoxChoice({ type, id }) {
   const { choice, setChoice } = useContext(GameContext);
+
   const newHouse = () => {
     return ["rock", "paper", "scissors"][Math.floor(Math.random() * 3)];
   };
-  const findWinner = (choice) => {
-    if (
-      choice.user === choice.house &&
-      choice.user != "" &&
-      choice.house != ""
-    ) {
-      setChoice((prev) => {
-        return { ...prev, winner: "draw" };
-      });
-    } else if (
-      choice.user === "rock" &&
-      choice.house === "paper" &&
-      choice.user != "" &&
-      choice.house != ""
-    ) {
-      setChoice((prev) => {
-        return { ...prev, winner: "house" };
-      });
-    }
-    // console.log(`user:${choice.user}, house:${choice.house}`);
-    // console.log(choice.winner);
-  };
+
   const handleClick = (e, type) => {
     setChoice((prev) => {
       let p1 = type;
@@ -51,17 +30,25 @@ export default function GameBoxChoice({ type, id }) {
       } else if (p1 === "scissors" && p2 === "rock" && p1 != "" && p2 != "") {
         win = "house";
       }
+
       // score logic
-      if (win == 'user') {
+      if (win == "user") {
         calcScore++;
-      } else if (win == 'house') {
+      } else if (win == "house") {
         calcScore--;
-      } 
-      return { ...prev, user: p1, house: p2, winner: win, score: calcScore, gameDone: true };
+      }
+
+      return {
+        ...prev,
+        user: p1,
+        house: p2,
+        winner: win,
+        score: calcScore,
+        gameDone: true,
+      };
     });
   };
 
-  console.log(choice);
   return (
     <div onClick={(evt) => handleClick(evt, type)}>
       <GameBox forChoice={true} type={type} />
