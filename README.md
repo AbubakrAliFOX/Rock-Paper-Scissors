@@ -1,8 +1,30 @@
-# React + Vite
+# React Rock, Paper, Scissors Game with Chakra UI
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a simple Rock, Paper, Scissors game built using React and styled with Chakra UI.
 
-Currently, two official plugins are available:
+## Table of Contents
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [Demo](#demo)
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Contributing](#contributing)
+- [License](#license)
+
+## Demo
+
+
+## Features
+
+- Play Rock, Paper, Scissors against the computer.
+- Visually appealing UI with Chakra components.
+- Keep track of the score.
+
+## Technologies Used
+- React: A JavaScript library for building user interfaces.
+- Chakra UI: A simple, modular, and accessible component library for React.
+
+
+## Contact Me
+- Email: AbubakrA.eldaw@gmail.com.
+- LinkedIn: https://www.linkedin.com/in/abubakr-eldaw/
+- Portfolio: https://portfolio-kfwr.onrender.com/
