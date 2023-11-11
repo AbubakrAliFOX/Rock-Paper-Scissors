@@ -1,5 +1,4 @@
 import { Box, Text, Link, Button, ButtonGroup } from "@chakra-ui/react";
-import { ExternalLinkIcon } from "@chakra-ui/icons";
 import { useContext } from "react";
 import { GameContext } from "../GameContext";
 
@@ -13,7 +12,7 @@ export default function Footer() {
       <Text>
         Rock Paper Scissors Game -{" "}
         <Link href="https://portfolio-kfwr.onrender.com/" isExternal>
-          Abubakr Ali <ExternalLinkIcon mx="2px" />
+          Abubakr Ali
         </Link>
       </Text>
       <ButtonGroup gap="4">
