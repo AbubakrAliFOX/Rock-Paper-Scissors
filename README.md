@@ -7,8 +7,7 @@ This is a simple Rock, Paper, Scissors game built using React and styled with Ch
 - [Demo](#demo)
 - [Features](#features)
 - [Technologies Used](#technologies-used)
-- [Contributing](#contributing)
-- [License](#license)
+- [Contact](#contact-me)
 
 ## Demo
 
