@@ -24,17 +24,13 @@ export default function Body() {
     }
   };
   const reset = () => {
-    setChoice(prev => {
-        return {...prev, user: '', house: '', winner:'', gameDone: false}
-    })
+    setChoice((prev) => {
+      return { ...prev, user: "", house: "", winner: "", gameDone: false };
+    });
   };
   return (
     <HStack mt={50} mb={40}>
-      <Box
-        
-        mx="auto"
-        display={choice.gameDone == true ? "none" : "block"}
-      >
+      <Box mx="auto" display={choice.gameDone == true ? "none" : "block"}>
         <VStack>
           <HStack>
             <GameBoxChoice id="Whatsup" value={3} type="rock" />
@@ -43,11 +39,8 @@ export default function Body() {
           <GameBoxChoice type="scissors" />
         </VStack>
       </Box>
-      <Box
-        
-        mx="auto"
-        display={choice.gameDone == true ? "block" : "none"}
-      >
+
+      <Box mx="auto" display={choice.gameDone == true ? "block" : "none"}>
         <VStack>
           <HStack>
             <GameBox type={choice.user} />
@@ -55,21 +48,17 @@ export default function Body() {
           </HStack>
           <Text>{showWinner()}</Text>
           <ButtonGroup gap="4">
-            <Button onClick={reset}>
-              Try again
-            </Button>
+            <Button onClick={reset}>Try again</Button>
           </ButtonGroup>
         </VStack>
       </Box>
-
-
 
       {/* <Box
         w={800} h={400} 
         mx="auto"
         display={choice.gameDone == true ? "block" : "none"}
       > */}
-        {/* <Image w={900} h={300}  src="rules.png"></Image> */}
+      {/* <Image w={900} h={300}  src="rules.png"></Image> */}
       {/* </Box> */}
     </HStack>
   );

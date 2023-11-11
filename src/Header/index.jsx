@@ -1,18 +1,18 @@
 import { HStack, Box, Image, Text } from "@chakra-ui/react";
 import { GameContext } from "../GameContext";
 import { useContext } from "react";
+import './style.css';
 
 export default function Header() {
     const {choice} = useContext(GameContext);
   return (
-    <HStack border="2px white solid" borderRadius="25px" mt={30}>
+    <HStack className="Header" border="2px white solid" borderRadius="25px" mt={30} mx="auto">
       <Box>
         <Image m="20px" mt="30px" src="title.svg" />
       </Box>
 
       <Box
-        w="100px"
-        h="120px"
+        className="scoreboard"
         ml="auto"
         mr="20px"
         display="inline"

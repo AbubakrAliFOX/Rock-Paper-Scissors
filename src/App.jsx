@@ -32,7 +32,7 @@ function App() {
   // }, [choice.user]);
   // console.log(choice);
   return (
-    <Box w="60%" mx="auto">
+    <Box w="80%" mx="auto">
       <GameContext.Provider value={{ choice, setChoice }}>
         <Header />
         <Body />

@@ -1,4 +1,5 @@
 import { Image, Circle } from "@chakra-ui/react";
+import './style.css'
 
 export default function GameBox({ type, forChoice }) {
   let borderColor = "";
@@ -24,13 +25,12 @@ export default function GameBox({ type, forChoice }) {
         transform: forChoice ? `scale(1.25)` : "scale(1)",
       }}
       style={styles}
-      w={130}
-      h={130}
+     className="circle"
       p={0}
       m={10}
       backgroundColor="white"
     >
-      <Image w={80} h={80} src={`${type}.svg`} />
+      <Image className="game-icon" src={`${type}.svg`} />
     </Circle>
   );
 }
