@@ -28,7 +28,7 @@ export default function Body() {
     });
   };
   return (
-    <HStack mt={50} mb={40}>
+    <HStack mt={15} >
       <Box mx="auto" display={choice.gameDone == true ? "none" : "block"}>
         <VStack>
           <HStack>
