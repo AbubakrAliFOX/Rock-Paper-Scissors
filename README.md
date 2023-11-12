@@ -10,7 +10,7 @@ This is a simple Rock, Paper, Scissors game built using React and styled with Ch
 - [Contact](#contact-me)
 
 ## Demo
-
+https://rock-paper-scissors-jezh.onrender.com/
 
 ## Features
 
