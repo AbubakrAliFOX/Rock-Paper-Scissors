@@ -4,7 +4,7 @@ import {
   VStack,
   Text,
   Button,
-  ButtonGroup
+  ButtonGroup,
 } from "@chakra-ui/react";
 import GameBoxChoice from "../GameBoxChoice";
 import GameBox from "../GameBox";
@@ -28,8 +28,8 @@ export default function Body() {
     });
   };
   return (
-    <HStack mt={15} >
-      <Box mx="auto" display={choice.gameDone == true ? "none" : "block"}>
+    <HStack mt={15}>
+      <Box mx="auto" mb="30px" display={choice.gameDone == true ? "none" : "block"}>
         <VStack>
           <HStack>
             <GameBoxChoice id="Whatsup" value={3} type="rock" />
@@ -39,7 +39,7 @@ export default function Body() {
         </VStack>
       </Box>
 
-      <Box mx="auto" display={choice.gameDone == true ? "block" : "none"}>
+      <Box mx="auto" mb="120px" display={choice.gameDone == true ? "block" : "none"}>
         <VStack>
           <HStack>
             <GameBox type={choice.user} />
@@ -47,7 +47,22 @@ export default function Body() {
           </HStack>
           <Text>{showWinner()}</Text>
           <ButtonGroup gap="4">
-            <Button onClick={reset}>Try again</Button>
+            <Button
+              color="white"
+              background="none"
+              border="1px white solid"
+              transition="transition: color 0.3s, border 0.3s, transform 0.3s, box-shadow 0.7s"
+              _hover={{
+                border: "1px #6700ff solid",
+                transform: "translateY(-4px)",
+              }}
+              _active={{
+                color: "#dd24e3",
+              }}
+              onClick={reset}
+            >
+              Try again
+            </Button>
           </ButtonGroup>
         </VStack>
       </Box>

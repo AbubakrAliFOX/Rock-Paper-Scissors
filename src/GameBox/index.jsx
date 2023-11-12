@@ -26,7 +26,7 @@ export default function GameBox({ type, forChoice }) {
       style={styles}
       className="circle"
       p={0}
-      m={10}
+      m="10px"
       backgroundColor="white"
     >
       <Image className="game-icon" src={`${type}.svg`} />
